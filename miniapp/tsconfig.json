@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "lib": ["ESNext", "DOM"],
+    "types": ["@dcloudio/types", "vite/client"]
+  },
+  "vueCompilerOptions": {
+    "nativeTags": [
+      "block",
+      "view",
+      "text",
+      "image",
+      "scroll-view",
+      "swiper",
+      "swiper-item",
+      "input",
+      "textarea",
+      "button",
+      "navigator",
+      "switch",
+      "checkbox",
+      "radio"
+    ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.vue",
+    "src/**/*.json",
+    "../shared/**/*.ts"
+  ]
+}

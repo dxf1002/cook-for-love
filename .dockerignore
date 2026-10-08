@@ -1,0 +1,11 @@
+# ── 构建上下文排除（保持镜像小而干净） ──
+**/node_modules
+dist
+miniapp
+data
+logs
+.git
+*.log
+.env
+.env.local
+.history

@@ -1,0 +1,42 @@
+# 为爱下厨 - 生产编排（单服务 + 数据卷）
+#
+# 用法:
+#   docker compose up -d --build          # 构建并启动
+#   docker compose logs -f                # 看日志
+#   docker compose down                   # 停止（数据保留在 ./data）
+#
+# 说明:
+#   - ./data 挂载到容器 /app/data：SQLite 库 + 上传图片 持久化，重建容器不丢
+#   - ./logs 挂载到容器 /app/logs：应用日志
+#   - HTTPS 建议：域名解析到本机后，用宿主机 Nginx/caddy 反代 3000 端口 + certbot
+services:
+  cooking-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: cooking-app:latest
+    container_name: cooking-app
+    restart: unless-stopped
+    ports:
+      - '3000:3000'
+    environment:
+      SERVER_PORT: '3000'
+      CLIENT_ORIGIN: '*'
+      DB_TYPE: 'sqlite'
+      DB_PATH: './data/app.db'
+      LOG_DIR: './logs'
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    healthcheck:
+      test:
+        [
+          'CMD',
+          'node',
+          '-e',
+          "fetch('http://127.0.0.1:3000/api/dishes').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))",
+        ]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s

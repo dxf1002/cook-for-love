@@ -1,0 +1,1 @@
+{"cases":[{"id":1,"priority":"p0","description":"打开首页，验证氛围图、4个快捷入口、今日推荐菜品卡片正常渲染"},{"id":2,"priority":"p0","description":"点击底部导航切换到菜单页，验证左侧分类栏和右侧菜品列表"},{"id":3,"priority":"p1","description":"点击底部导航切换到点菜页，验证4种套餐模式和菜品网格"},{"id":4,"priority":"p1","description":"点击底部导航切换到已选页，验证空状态或已选菜品列表"},{"id":5,"priority":"p0","description":"从首页今日推荐点击一道菜进入详情页，验证菜品大图、食材、步骤、加入菜单按钮"}]}

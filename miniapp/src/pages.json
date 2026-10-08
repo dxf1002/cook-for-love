@@ -1,0 +1,58 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "首页"
+      }
+    },
+    {
+      "path": "pages/menu/menu",
+      "style": {
+        "navigationBarTitleText": "菜单"
+      }
+    },
+    {
+      "path": "pages/order/order",
+      "style": {
+        "navigationBarTitleText": "点菜"
+      }
+    },
+    {
+      "path": "pages/cart/cart",
+      "style": {
+        "navigationBarTitleText": "已选"
+      }
+    },
+    {
+      "path": "pages/recommend/recommend",
+      "style": {
+        "navigationBarTitleText": "智能推荐"
+      }
+    },
+    {
+      "path": "pages/dish/dish",
+      "style": {
+        "navigationBarTitleText": "菜品详情"
+      }
+    }
+  ],
+  "tabBar": {
+    "color": "#9A928A",
+    "selectedColor": "#FF7A6B",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "list": [
+      { "pagePath": "pages/index/index", "text": "首页" },
+      { "pagePath": "pages/menu/menu", "text": "菜单" },
+      { "pagePath": "pages/order/order", "text": "点菜" },
+      { "pagePath": "pages/cart/cart", "text": "已选" }
+    ]
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "为爱下厨",
+    "navigationBarBackgroundColor": "#F8F5F0",
+    "backgroundColor": "#F8F5F0"
+  }
+}
