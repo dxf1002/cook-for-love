@@ -32,6 +32,7 @@ const CATEGORY_COLORS: Record<string, string> = {
   soup: '#FFA94D',
   staple: '#F0C040',
   dessert: '#D485E8',
+  fatLoss: '#D485E8',
 };
 
 /** 分类 id -> 颜色，供新增菜品/改分类时给 dish.color 赋值。 */

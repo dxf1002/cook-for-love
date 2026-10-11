@@ -17,7 +17,7 @@
     "build": "npm run build:prod",
     "build:prod": "npm run build:server && npm run build:client",
     "build:server": "cross-env NODE_ENV=production nest build",
-    "build:client": "cross-env NODE_ENV=production vite build --config vite.config.ts",
+    "build:client": "cross-env NODE_ENV=production vite build --config vite.config.ts && node -e \"const fs=require('fs');fs.copyFileSync('dist/client/client/index.html','dist/client/index.html');fs.rmSync('dist/client/client',{recursive:true,force:true})\"",
     "start": "cross-env NODE_ENV=production node main.js",
     "test": "jest",
     "test:watch": "jest --watch",

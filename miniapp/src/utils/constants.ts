@@ -5,6 +5,7 @@ export const CATEGORIES = [
   { id: 'soup', name: '汤羹', color: '#FFA94D' },
   { id: 'staple', name: '主食', color: '#F0C040' },
   { id: 'dessert', name: '甜品', color: '#D485E8' },
+  { id: 'fatLoss', name: '减脂餐', color: '#D485E8' },
 ];
 
 export const COMBOS = [
@@ -29,7 +30,7 @@ export const COMBOS = [
   { id: 'free', name: '自由选', desc: '想吃啥选啥', rules: null },
 ];
 
-export const HERO_IMAGE = 'https://aka.doubaocdn.com/s/UsB92248ur';
+export const HERO_IMAGE = '/static/background.png';
 
 export const CATEGORY_MAP: Record<string, { name: string; color: string }> =
   CATEGORIES.reduce(
